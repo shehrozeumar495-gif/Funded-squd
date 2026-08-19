@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FundindPips — Instant Accounts</title>
+<style>
+:root{--navy:#062d62;--blue:#3150db;--light:#f5f7fb;--text:#17365f;--muted:#7e8da5}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--text);background:#fff}
+header{height:82px;border-bottom:1px solid #e9edf3;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 6%;position:sticky;top:0;z-index:10}
+.logo{font-size:28px;font-weight:850;letter-spacing:-1px;color:var(--navy)}
+nav{display:flex;gap:26px;align-items:center}nav a{color:var(--text);text-decoration:none;font-weight:600}
+.btn{border:0;border-radius:10px;padding:13px 23px;font-weight:750;font-size:15px;cursor:pointer}
+.primary{background:var(--blue);color:white}.outline{background:white;border:1px solid #dce2eb;color:var(--text)}
+.hero{padding:75px 20px 45px;text-align:center;background:linear-gradient(180deg,#f8faff 0%,#fff 100%)}
+.badge{display:inline-block;background:#eaf0ff;color:#2948c7;border-radius:30px;padding:8px 15px;font-weight:750;font-size:13px;margin-bottom:18px}
+h1{font-size:52px;line-height:1.05;margin:0 auto 18px;max-width:850px;color:var(--navy);letter-spacing:-2px}
+.hero p{max-width:650px;margin:0 auto;color:var(--muted);font-size:18px;line-height:1.6}
+.section{max-width:1180px;margin:auto;padding:45px 20px 80px}
+.section-title{text-align:center;margin-bottom:28px}.section-title h2{font-size:32px;margin:0 0 8px;color:var(--navy)}.section-title p{margin:0;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{border:1px solid #e5eaf1;border-radius:22px;padding:27px;background:#fff;box-shadow:0 10px 30px #062d620b;position:relative}
+.card.featured{border:2px solid var(--blue);box-shadow:0 14px 35px #3150db18}
+.tag{position:absolute;right:18px;top:18px;background:#eaf0ff;color:#2948c7;padding:6px 10px;border-radius:20px;font-size:12px;font-weight:800}
+.amount{font-size:17px;color:var(--muted);font-weight:650}.price{font-size:40px;font-weight:850;color:var(--navy);margin:8px 0 3px}.account{font-size:16px;color:var(--muted);margin-bottom:20px}
+.features{list-style:none;padding:0;margin:0 0 23px}.features li{padding:9px 0;border-bottom:1px solid #edf0f4;font-size:14px}.features li:last-child{border:0}
+.card .btn{width:100%;padding:14px}
+.info{background:var(--light);border-radius:20px;padding:26px;margin-top:28px;display:grid;grid-template-columns:repeat(4,1fr);gap:15px;text-align:center}
+.info strong{display:block;font-size:23px;color:var(--navy)}.info span{font-size:13px;color:var(--muted)}
+footer{background:#061f42;color:#dbe5f4;text-align:center;padding:28px 20px;font-size:13px;line-height:1.6}
+.disclaimer{max-width:900px;margin:0 auto}
+@media(max-width:800px){nav a{display:none}.grid{grid-template-columns:1fr}.hero{padding-top:55px}h1{font-size:39px}.info{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">FundindPips</div>
+  <nav>
+    <a href="#accounts">Accounts</a>
+    <a href="#rules">Rules</a>
+    <a href="#accounts" class="btn primary">Buy Account</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="badge">INSTANT FUNDING</div>
+  <h1>Trade with an Instant Account</h1>
+  <p>Choose your account size and start trading with simple, clearly displayed account rules.</p>
+</section>
+
+<section class="section" id="accounts">
+  <div class="section-title">
+    <h2>Instant Accounts</h2>
+    <p>One account type. No evaluation steps.</p>
+  </div>
+
+  <div class="grid">
+    <article class="card">
+      <div class="amount">$5K Account</div><div class="price">$110</div><div class="account">Instant Account</div>
+      <ul class="features"><li>Max Loss — 5%</li><li>Daily Loss — 3%</li><li>Consistency — 15%</li><li>Minimum Profitable Days — 7 days</li><li>Profit Split — 95% · Biweekly</li></ul>
+      <button class="btn primary" onclick="buy('5K','$110')">Buy Account</button>
+    </article>
+
+    <article class="card">
+      <div class="amount">$10K Account</div><div class="price">$160</div><div class="account">Instant Account</div>
+      <ul class="features"><li>Max Loss — 5%</li><li>Daily Loss — 3%</li><li>Consistency — 15%</li><li>Minimum Profitable Days — 7 days</li><li>Profit Split — 95% · Biweekly</li></ul>
+      <button class="btn primary" onclick="buy('10K','$160')">Buy Account</button>
+    </article>
+
+    <article class="card featured">
+      <div class="tag">POPULAR</div>
+      <div class="amount">$25K Account</div><div class="price">$240</div><div class="account">Instant Account</div>
+      <ul class="features"><li>Max Loss — 5%</li><li>Daily Loss — 3%</li><li>Consistency — 15%</li><li>Minimum Profitable Days — 7 days</li><li>Profit Split — 95% · Biweekly</li></ul>
+      <button class="btn primary" onclick="buy('25K','$240')">Buy Account</button>
+    </article>
+
+    <article class="card">
+      <div class="amount">$50K Account</div><div class="price">$315</div><div class="account">Instant Account</div>
+      <ul class="features"><li>Max Loss — 5%</li><li>Daily Loss — 3%</li><li>Consistency — 15%</li><li>Minimum Profitable Days — 7 days</li><li>Profit Split — 95% · Biweekly</li></ul>
+      <button class="btn primary" onclick="buy('50K','$315')">Buy Account</button>
+    </article>
+
+    <article class="card">
+      <div class="amount">$100K Account</div><div class="price">$520</div><div class="account">Instant Account</div>
+      <ul class="features"><li>Max Loss — 5%</li><li>Daily Loss — 3%</li><li>Consistency — 15%</li><li>Minimum Profitable Days — 7 days</li><li>Profit Split — 95% · Biweekly</li></ul>
+      <button class="btn primary" onclick="buy('100K','$520')">Buy Account</button>
+    </article>
+
+    <article class="card">
+      <div class="amount">$200K Account</div><div class="price">$1,020</div><div class="account">Instant Account</div>
+      <ul class="features"><li>Max Loss — 5%</li><li>Daily Loss — 3%</li><li>Consistency — 15%</li><li>Minimum Profitable Days — 7 days</li><li>Profit Split — 95% · Biweekly</li></ul>
+      <button class="btn primary" onclick="buy('200K','$1,020')">Buy Account</button>
+    </article>
+  </div>
+
+  <div class="info" id="rules">
+    <div><strong>3%</strong><span>Daily Loss</span></div>
+    <div><strong>5%</strong><span>Max Loss</span></div>
+    <div><strong>15%</strong><span>Consistency</span></div>
+    <div><strong>95%</strong><span>Profit Split</span></div>
+  </div>
+</section>
+
+<footer>
+  <div class="disclaimer">
+    <strong>FundindPips</strong> is a fictional/template brand for demonstration purposes and is not affiliated with, sponsored by, or endorsed by FundingPips or any other company.
+    Replace the account rules, payout terms, legal information, and payment flow with your actual verified terms before publishing or selling any service.
+  </div>
+</footer>
+
+<script>
+function buy(account,price){
+  alert('Selected: '+account+' Instant Account — '+price+'\n\nConnect this button to your own verified checkout/payment page.');
+}
+</script>
+</body>
+</html>
